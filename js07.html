@@ -1,10 +1,10 @@
 <html>
-    <head><title>Check Brow</title>
+    <head><title>re-direct based upon window size</title>
     </head>
     <body>
-        <script language="JavaScrip">
+        <script language=JavaScript>
         function windowHeight(){
-            if (document.body.clientHeight){
+            if (document.body && document.body.clientHeight){
                 return document.body.clientHeight;
             
             } else if (window.innerHeight){
@@ -16,10 +16,10 @@
             }
         }
         if (windowHeight()>=300){
-            document.location = "your html http://";
+            document.location = "https://www.google.com/";
         }
         else{
-            document.location = "your html http://";
+            document.location = "https://www.facebook.com/";
         }
         </script>
     </body>

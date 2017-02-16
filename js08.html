@@ -1,27 +1,30 @@
 <html>
-    <head><title>Image rollover</title>
-    <script language=javascript>
-    function highlightdocs(){
-        if(document.images) { document.images["docs"].src = docsOn.src;}
-    }
-        function unhighlightdocs(){
-            if(document.images){document.images["docs"].src = docsOff.src;}
-            
-            }
+<head>
+    <title>Image rollover</title>
+    
+  <script>
+        function highlightdocs(){
             if(document.images){
-                docsOn = new Image();
-                docsOn = "gg_color.png";
-                docsOff = new Image();
-                docsOff.src = "gg_gray.png"
+                document.images["docs"].src=docsOn.src;
             }
-        
-            </script>
+        }
+        function unhighlightdocs(){
+            if(document.images){
+                document.images["docs"].src= docsOff.src;
+            }
+        }
+        if(document.images){
+            docsOn = new Image();
+            docsOn.src = "gg_color.png"
+            docsOff = new Image();
+            docsOff.src = "gg_gray.png"
+        }
+        </script>
     </head>
     <body>
-    <p><A href= "http://www.gooogle>"
-    onMoudeOver ="highlightdocs()" OnMouseOff="unhighlightdocs()";
-    < img src ="gg_gray.png" name = docs height = 25 width = 25 border = 0 >
-    </A> 
-    </p>
+        <p><a href="http://www.google.com"onMouseOver="highlightdocs()" onMouseOut="unhighlightdocs()">
+            <img src="gg_color.png" name=docs height=250 width=250 border=0>
+            </a>
+        </p>
     </body>
-    </html>
+</html>
